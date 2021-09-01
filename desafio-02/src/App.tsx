@@ -3,7 +3,7 @@ import Menu from './components/Menu'
 import Sidebar from './components/Sidebar'
 import Content from './components/Content'
 import Footer from './components/Footer'
-import { H1, H2, H3 } from './components/ui/Headings'
+import { H1, H3 } from './components/ui/Headings'
 import Button from './components/ui/Button'
 import { Article } from './types'
 
@@ -77,12 +77,7 @@ function App () {
         <a href=''>Grade do Curso</a>
       </Menu>
       <Sidebar articles={articles} />
-      <Content>
-        <H2>Bootcamp</H2>
-        <p>Conheça mais sobre como funciona o Bootcamp.</p>
-        <Button kind='primary'>Registrar</Button>
-        <Button kind='secondary'>Saber mais</Button>
-      </Content>
+      <Content article={articles[0]} />
       <Footer>
         B. Academy
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>
