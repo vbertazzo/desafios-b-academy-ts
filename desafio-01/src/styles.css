@@ -1,7 +1,7 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 #root {
@@ -20,25 +20,49 @@ body {
 
 .header {
   grid-area: header;
+  padding: 2rem;
   background-color: cadetblue;
 }
 
 .menu {
   grid-area: menu;
+  padding: 2rem;
   background-color: blanchedalmond;
 }
 
 .sidebar {
   grid-area: sidebar;
+  padding: 2rem;
   background-color: darkcyan;
 }
 
 .content {
   grid-area: content;
-  background-color: darksalmon;
+  padding: 2rem;
 }
 
 .footer {
   grid-area: footer;
+  padding: 2rem;
   background-color: darkkhaki;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.primary {
+  background: #f73263;
+  color: #0d0d0d;
+}
+
+.secondary {
+  background: #f7f7f7;
+  border: solid 1px #f73263;
+  color: #f73263;
+  margin-left: 1rem;
 }

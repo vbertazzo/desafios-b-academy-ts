@@ -1,7 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
 
 type FooterProps = {
-  children?: ReactElement[]
+  children?: ReactNode
 }
 
 export default function Footer ({ children }: FooterProps) {

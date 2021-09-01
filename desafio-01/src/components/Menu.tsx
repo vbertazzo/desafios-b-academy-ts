@@ -1,7 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
 
 type MenuProps = {
-  children?: ReactElement[]
+  children?: ReactNode
 }
 
 export default function Menu ({ children }: MenuProps) {

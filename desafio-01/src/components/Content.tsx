@@ -1,7 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
 
 type ContentProps = {
-  children?: ReactElement[]
+  children?: ReactNode
 }
 
 export default function Content ({ children }: ContentProps) {
