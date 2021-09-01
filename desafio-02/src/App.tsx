@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Header from './components/Header'
 import Menu from './components/Menu'
 import Sidebar from './components/Sidebar'
@@ -68,6 +69,18 @@ function App () {
     }
   ]
 
+  const [currentArticle, setCurrentArticle] = useState(articles[0])
+
+  function onLinkClick (id: number) {
+    const nextArticle = articles.find(article => article.id === id)
+
+    if (!nextArticle) {
+      return
+    }
+
+    setCurrentArticle(nextArticle)
+  }
+
   return (
     <>
       <Header>
@@ -76,8 +89,8 @@ function App () {
       <Menu>
         <a href=''>Grade do Curso</a>
       </Menu>
-      <Sidebar articles={articles} />
-      <Content article={articles[0]} />
+      <Sidebar articles={articles} onLinkClick={onLinkClick} />
+      <Content article={currentArticle} />
       <Footer>
         B. Academy
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>
