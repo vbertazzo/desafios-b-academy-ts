@@ -5,10 +5,10 @@ import Content from './components/Content'
 import Footer from './components/Footer'
 import { H1, H2, H3 } from './components/ui/Headings'
 import Button from './components/ui/Button'
-import { Link } from './types'
+import { Article } from './types'
 
 function App () {
-  const articles: Link[] = [
+  const articles: Article[] = [
     {
       id: 1,
       title: 'Introdução ao React.js',
@@ -76,7 +76,7 @@ function App () {
       <Menu>
         <a href=''>Grade do Curso</a>
       </Menu>
-      <Sidebar links={articles} />
+      <Sidebar articles={articles} />
       <Content>
         <H2>Bootcamp</H2>
         <p>Conheça mais sobre como funciona o Bootcamp.</p>

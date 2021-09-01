@@ -1,15 +1,17 @@
-import { Link } from '../types'
+import { Article } from '../types'
 
 type SidebarProps = {
-  links: Link[]
+  articles: Article[]
 }
 
-export default function Sidebar ({ links }: SidebarProps) {
+export default function Sidebar ({ articles }: SidebarProps) {
   return (
     <aside className='sidebar'>
       <ul>
-        {links.map(link => (
-          <li key={link.id}>{link.title}</li>
+        {articles.map(article => (
+          <li key={article.id}>
+            <button>{article.title}</button>
+          </li>
         ))}
       </ul>
     </aside>
