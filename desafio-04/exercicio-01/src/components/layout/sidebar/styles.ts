@@ -5,6 +5,7 @@ type SidebarButtonProps = {
 }
 
 export const Sidebar = styled.aside`
+  grid-area: sidebar;
   padding: 4rem 4rem;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   background: white;
