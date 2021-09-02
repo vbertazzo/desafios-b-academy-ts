@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 
-type Kind = 'primary' | 'secondary'
+import * as S from './styles'
+
+export type Kind = 'primary' | 'secondary'
 
 type ButtonProps = {
   children: ReactNode
@@ -9,8 +11,8 @@ type ButtonProps = {
 
 export default function Button ({ children, kind }: ButtonProps) {
   return (
-    <button type='button' className={`button ${kind}`}>
+    <S.Button type='button' kind={kind}>
       {children}
-    </button>
+    </S.Button>
   )
 }

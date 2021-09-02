@@ -1,9 +1,11 @@
 import { ReactNode } from 'react'
 
+import * as S from './styles'
+
 type FooterProps = {
   children?: ReactNode
 }
 
 export default function Footer ({ children }: FooterProps) {
-  return <footer className='footer'>{children}</footer>
+  return <S.Wrapper>{children}</S.Wrapper>
 }
